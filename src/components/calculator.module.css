@@ -1,0 +1,17 @@
+.sectionWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s1);
+}
+
+.sectionWrapper > :last-child {
+  flex-basis: 12rem;
+  flex-grow: 1;
+  font-size: smaller;
+}
+
+.sectionWrapper > :first-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: 50%;
+}

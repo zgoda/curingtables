@@ -17,6 +17,7 @@
     "downlevelIteration": true
   },
   "include": [
+    "vite/dist/node",
     "vite/client",
     "**/*"
   ],
