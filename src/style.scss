@@ -3,3 +3,21 @@ $primary-600: #c0ca33;
 $primary-700: #afb42b;
 
 @import '../node_modules/@picocss/pico/scss/pico.scss';
+
+.section-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s1);
+}
+
+.section-wrapper > :last-child {
+  flex-basis: 12rem;
+  flex-grow: 1;
+  font-size: smaller;
+}
+
+.section-wrapper > :first-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: 50%;
+}
