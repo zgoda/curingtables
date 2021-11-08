@@ -2,7 +2,7 @@
   "help": {
     "tableSelect": [
       "Wybierz rodzaj tabeli, \"klasyczna\" przewiduje większe ilości soli, a \"współczesna\" mniejszą ilość soli, za to większy nastrzyk.",
-      "Każda z nich wylicza minimalną i makzymalną ilość soli dla wybranego czasu peklowania i wagi mięsa."
+      "Każda z nich wylicza minimalną i maksymalną ilość soli dla wybranego czasu peklowania i wagi mięsa."
     ],
     "days": [
       "Wybierz ile dni ma trwać proces peklowania. Maksymalna ilość dni jaką można wybrać to 13 i tyle należy wybrać dla procesów trwających dłużej.",

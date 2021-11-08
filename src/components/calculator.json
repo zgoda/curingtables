@@ -1,0 +1,19 @@
+{
+  "text": {
+    "typeClassic": "klasyczna",
+    "typeModern": "współczesna",
+    "form": {
+      "tableType": {
+        "label": "Wybierz rodzaj tabeli"
+      },
+      "days": {
+        "label": "Długość peklowania w dniach"
+      },
+      "meatWeight": {
+        "label": "Waga mięsa"
+      }
+    },
+    "buttonCalc": "Oblicz",
+    "buttonClear": "Wyczyść"
+  }
+}

@@ -5,6 +5,7 @@ import { ResultsPanel } from './results';
 import { TableType } from '../tables';
 
 import style from './calculator.module.css';
+import { text } from './calculator.json';
 
 export function Calculator() {
   const [selectedItem, setSelectedItem] = useState('');
@@ -17,8 +18,8 @@ export function Calculator() {
   const tables = useMemo(
     () =>
       new Map([
-        [TableType.CLASSIC, 'klasyczna'],
-        [TableType.MODERN, 'współczesna'],
+        [TableType.CLASSIC, text.typeClassic],
+        [TableType.MODERN, text.typeModern],
       ]),
     [],
   );
@@ -49,7 +50,7 @@ export function Calculator() {
     <section class={style.sectionWrapper}>
       <div>
         <label>
-          Wybierz rodzaj tabeli
+          {text.form.tableType.label}
           <select
             required
             value={tableType}
@@ -65,7 +66,7 @@ export function Calculator() {
           </select>
         </label>
         <label>
-          Długość peklowania w dniach
+          {text.form.days.label}
           <input
             type="number"
             min="1"
@@ -77,7 +78,7 @@ export function Calculator() {
           />
         </label>
         <label>
-          Waga mięsa
+          {text.form.meatWeight.label}
           <input
             type="number"
             min="0.01"
@@ -89,9 +90,9 @@ export function Calculator() {
           />
         </label>
         <div class="grid">
-          <button onClick={showResultsPanel}>Oblicz</button>
+          <button onClick={showResultsPanel}>{text.buttonCalc}</button>
           <button class="outline" onClick={() => setResultsVisible(false)}>
-            Wyczyść
+            {text.buttonClear}
           </button>
         </div>
         {resultsVisible && (
