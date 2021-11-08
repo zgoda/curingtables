@@ -1,0 +1,31 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "jsx": "preserve",
+    "jsxFactory": "preact.h",
+    "jsxFragmentFactory": "preact.Fragment",
+    "allowJs": true,
+    "checkJs": true,
+    // "strict": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "moduleResolution": "node",
+    "target": "ESNext",
+    "module": "esnext",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "downlevelIteration": true
+  },
+  "include": [
+    "vite/client",
+    "**/*"
+  ],
+  "typeAcquisition": {
+    "enable": true,
+    "exclude": [
+      "source-map",
+      "agent-base",
+      "https-proxy-agent"
+    ]
+  }
+}
