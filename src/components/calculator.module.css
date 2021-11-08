@@ -1,13 +1,12 @@
 .sectionWrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--s1);
+  gap: 1rem;
 }
 
 .sectionWrapper > :last-child {
   flex-basis: 12rem;
   flex-grow: 1;
-  font-size: smaller;
 }
 
 .sectionWrapper > :first-child {

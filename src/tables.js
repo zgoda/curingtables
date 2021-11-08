@@ -36,11 +36,26 @@ export const CuringDays = Object.freeze({
   ELEVEN_TO_THIRTEEN: 11,
 });
 
+const DAYS = [
+  CuringDays.ONE,
+  CuringDays.TWO,
+  CuringDays.THREE,
+  CuringDays.FOUR,
+  CuringDays.FIVE,
+  CuringDays.SIX,
+  CuringDays.SEVEN,
+];
+
+export const TableType = Object.freeze({
+  CLASSIC: 'classic',
+  MODERN: 'modern',
+});
+
 export const WATER_RATIO = 0.4; // kgms or litres
 export const INJECT_SIZE = 0.06; // litres
 export const MASSAGE_THRESHOLD = 4; // massage required if curing period shorter
 
-export const SALT_CLASSIC_HIGH = new Map([
+const SALT_CLASSIC_HIGH = new Map([
   [CuringDays.ONE, 80],
   [CuringDays.TWO, 74],
   [CuringDays.THREE, 68],
@@ -52,7 +67,7 @@ export const SALT_CLASSIC_HIGH = new Map([
   [CuringDays.ELEVEN_TO_THIRTEEN, 42],
 ]);
 
-export const INJECT_RATE_CLASSIC_HIGH = new Map([
+const INJECT_RATE_CLASSIC_HIGH = new Map([
   [CuringDays.ONE, 4],
   [CuringDays.TWO, 4],
   [CuringDays.THREE, 3],
@@ -64,7 +79,7 @@ export const INJECT_RATE_CLASSIC_HIGH = new Map([
   [CuringDays.ELEVEN_TO_THIRTEEN, 1],
 ]);
 
-export const SALT_CLASSIC_LOW = new Map([
+const SALT_CLASSIC_LOW = new Map([
   [CuringDays.ONE, 76],
   [CuringDays.TWO, 70],
   [CuringDays.THREE, 64],
@@ -76,7 +91,7 @@ export const SALT_CLASSIC_LOW = new Map([
   [CuringDays.ELEVEN_TO_THIRTEEN, 40],
 ]);
 
-export const INJECT_RATE_CLASSIC_LOW = new Map([
+const INJECT_RATE_CLASSIC_LOW = new Map([
   [CuringDays.ONE, 5],
   [CuringDays.TWO, 4],
   [CuringDays.THREE, 3],
@@ -88,7 +103,7 @@ export const INJECT_RATE_CLASSIC_LOW = new Map([
   [CuringDays.ELEVEN_TO_THIRTEEN, 1],
 ]);
 
-export const SALT_MODERN_HIGH = new Map([
+const SALT_MODERN_HIGH = new Map([
   [CuringDays.ONE, 76],
   [CuringDays.TWO, 72],
   [CuringDays.THREE, 64],
@@ -100,7 +115,7 @@ export const SALT_MODERN_HIGH = new Map([
   [CuringDays.ELEVEN_TO_THIRTEEN, 34],
 ]);
 
-export const INJECT_RATE_MODERN_HIGH = new Map([
+const INJECT_RATE_MODERN_HIGH = new Map([
   [CuringDays.ONE, 4],
   [CuringDays.TWO, 4],
   [CuringDays.THREE, 2],
@@ -112,7 +127,7 @@ export const INJECT_RATE_MODERN_HIGH = new Map([
   [CuringDays.ELEVEN_TO_THIRTEEN, 1],
 ]);
 
-export const SALT_MODERN_LOW = new Map([
+const SALT_MODERN_LOW = new Map([
   [CuringDays.ONE, 72],
   [CuringDays.TWO, 68],
   [CuringDays.THREE, 60],
@@ -124,7 +139,7 @@ export const SALT_MODERN_LOW = new Map([
   [CuringDays.ELEVEN_TO_THIRTEEN, 32],
 ]);
 
-export const INJECT_RATE_MODERN_LOW = new Map([
+const INJECT_RATE_MODERN_LOW = new Map([
   [CuringDays.ONE, 5],
   [CuringDays.TWO, 4],
   [CuringDays.THREE, 3],
@@ -135,3 +150,51 @@ export const INJECT_RATE_MODERN_LOW = new Map([
   [CuringDays.EIGHT_TO_TEN, 1.2],
   [CuringDays.ELEVEN_TO_THIRTEEN, 1],
 ]);
+
+const TYPE_TO_TABLE = new Map([
+  [TableType.CLASSIC, { low: SALT_CLASSIC_LOW, high: SALT_CLASSIC_HIGH }],
+  [TableType.MODERN, { low: SALT_MODERN_LOW, high: SALT_MODERN_HIGH }],
+]);
+
+const TYPE_TO_INJECTION = new Map([
+  [TableType.CLASSIC, { low: INJECT_RATE_CLASSIC_LOW, high: INJECT_RATE_CLASSIC_HIGH }],
+  [TableType.MODERN, { low: INJECT_RATE_MODERN_LOW, high: INJECT_RATE_MODERN_HIGH }],
+]);
+
+/**
+ * @param {string} table
+ * @param {number} days
+ * @returns {import('..').Rate}
+ */
+export function getSaltRate(table, days) {
+  const { low, high } = TYPE_TO_TABLE.get(table);
+  /** @type {number} */
+  let curingDays;
+  if (days >= 8 && days < 11) {
+    curingDays = CuringDays.EIGHT_TO_TEN;
+  } else if (days > 10) {
+    curingDays = CuringDays.ELEVEN_TO_THIRTEEN;
+  } else {
+    curingDays = DAYS[days - 1];
+  }
+  return { low: low.get(curingDays), high: high.get(curingDays) };
+}
+
+/**
+ * @param {string} table
+ * @param {number} days
+ * @returns {import('..').Rate}
+ */
+export function getInjectionRate(table, days) {
+  const { low, high } = TYPE_TO_INJECTION.get(table);
+  /** @type {number} */
+  let curingDays;
+  if (days >= 8 && days < 11) {
+    curingDays = CuringDays.EIGHT_TO_TEN;
+  } else if (days > 10) {
+    curingDays = CuringDays.ELEVEN_TO_THIRTEEN;
+  } else {
+    curingDays = DAYS[days - 1];
+  }
+  return { low: low.get(curingDays), high: high.get(curingDays) };
+}

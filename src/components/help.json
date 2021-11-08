@@ -1,0 +1,16 @@
+{
+  "help": {
+    "tableSelect": [
+      "Wybierz rodzaj tabeli, \"klasyczna\" przewiduje większe ilości soli, a \"współczesna\" mniejszą ilość soli, za to większy nastrzyk.",
+      "Każda z nich wylicza minimalną i makzymalną ilość soli dla wybranego czasu peklowania i wagi mięsa."
+    ],
+    "days": [
+      "Wybierz ile dni ma trwać proces peklowania. Maksymalna ilość dni jaką można wybrać to 13 i tyle należy wybrać dla procesów trwających dłużej.",
+      "Pamiętaj aby peklowanie zawsze przeprowadzać w warunkach chłodniczych - w wyższej temperaturze przebiega ono szybciej, a ten kalkulator tego nie uwzględnia."
+    ],
+    "meatWeight": [
+      "Waga peklowanego mięsa, maksymalna dokładność to 10 gramów (0,01 kg).",
+      "W przypadku peklowania mięsa z kością należy uwzględnić wagę wraz z kością."
+    ]
+  }
+}

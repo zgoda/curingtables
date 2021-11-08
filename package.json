@@ -7,7 +7,9 @@
     "serve": "vite preview",
     "test": "jest"
   },
+  "types": "./index.d.ts",
   "dependencies": {
+    "@lukeed/uuid": "^2.0.0",
     "@picocss/pico": "^1.4.1",
     "preact": "^10.5.15",
     "preact-feather": "^4.2.1"

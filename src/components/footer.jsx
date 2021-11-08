@@ -1,13 +1,15 @@
+import { text } from './footer.json';
+
 export function Footer() {
   return (
     <section>
       <footer>
         <hr />
-        <p>Copyright: © 2021, Jarek Zgoda. Wolne oprogramowanie na licencji BSD.</p>
+        <p>{text.copyright}</p>
         <div class="grid">
-          <div>O aplikacji</div>
-          <div>Deklaracja prywatności</div>
-          <div>Kontakt</div>
+          {text.links.map((linkText) => (
+            <div key={`link-${linkText}`}>{linkText}</div>
+          ))}
         </div>
       </footer>
     </section>
