@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview",
+    "serve": "cross-env PORT=8443 serve dist",
+    "start": "npm run build && npm run serve",
     "test": "jest"
   },
   "types": "./index.d.ts",
@@ -18,14 +19,18 @@
     "@preact/preset-vite": "^2.1.5",
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/preact": "^2.0.1",
+    "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
     "eslint-config-preact": "^1.2.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "https-localhost": "^4.7.0",
     "jest": "^27.3.1",
     "jest-preset-preact": "^4.0.5",
     "prettier": "^2.4.1",
     "sass": "^1.43.4",
-    "vite": "^2.6.13"
+    "vite": "^2.6.13",
+    "vite-plugin-pwa": "^0.11.3",
+    "workbox-window": "^6.3.0"
   }
 }
