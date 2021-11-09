@@ -1,0 +1,8 @@
+{
+  "text": {
+    "offlineReady": "Aplikacja gotowa do pracy offline",
+    "contentRefresh": "Dostępna jest nowa wersja aplikacji, kliknij guzik \"Przeładuj\" aby ją odświeżyć",
+    "reloadButton": "Przeładuj",
+    "closeButton": "Zamknij"
+  }
+}

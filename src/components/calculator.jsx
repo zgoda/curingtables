@@ -28,7 +28,7 @@ export function Calculator() {
   useEffect(() => {
     setSelectedItem(items[0]);
     setTableType(TableType.MODERN);
-  }, [items, tables]);
+  }, [items]);
 
   const showResultsPanel = () => setResultsVisible(!resultsVisible);
 

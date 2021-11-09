@@ -6,10 +6,10 @@ import { ReloadPrompt } from './components/reloadprompt';
 export function App() {
   return (
     <>
+      <ReloadPrompt />
       <Header />
       <Calculator />
       <Footer />
-      <ReloadPrompt />
     </>
   );
 }
