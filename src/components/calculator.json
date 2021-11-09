@@ -4,13 +4,13 @@
     "typeModern": "współczesna",
     "form": {
       "tableType": {
-        "label": "Wybierz rodzaj tabeli"
+        "label": "Wybierz rodzaj tabeli (poziom słoności)"
       },
       "days": {
         "label": "Długość peklowania w dniach"
       },
       "meatWeight": {
-        "label": "Waga mięsa"
+        "label": "Waga mięsa w kilogramach"
       }
     },
     "buttonCalc": "Oblicz",
