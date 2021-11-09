@@ -6,6 +6,8 @@ import {
   WATER_RATIO,
 } from '../tables';
 
+import { text } from './result.json';
+
 /**
  * @typedef {object} Props
  * @property {string} table
@@ -33,30 +35,26 @@ export function ResultsPanel({ table, days, weight }) {
   return (
     <article>
       <header>
-        <h2>Wyniki obliczeń</h2>
+        <h2>{text.title}</h2>
       </header>
       <ul>
         <li>
-          <strong>Ilość wody:</strong> {water.toFixed(1)} l
+          <strong>{text.water}:</strong> {water.toFixed(1)} l
         </li>
         <li>
-          <strong>Ilość soli, minimum:</strong> {saltLow.toFixed()} g
+          <strong>{text.saltMin}:</strong> {saltLow.toFixed()} g
         </li>
         <li>
-          <strong>Ilość soli, maksimum:</strong> {saltHigh.toFixed()} g
+          <strong>{text.saltMax}:</strong> {saltHigh.toFixed()} g
         </li>
         <li>
-          <strong>Nastrzyk przy minimalnej ilości soli:</strong>{' '}
-          {injectionLow.toFixed()} ml
+          <strong>{text.injMin}:</strong> {injectionLow.toFixed()} ml
         </li>
         <li>
-          <strong>Nastrzyk przy maksymalnej ilości soli:</strong>{' '}
-          {injectionHigh.toFixed()} ml
+          <strong>{text.injMax}:</strong> {injectionHigh.toFixed()} ml
         </li>
       </ul>
-      {massageRequired && (
-        <p>Uwaga, wymagane będzie masowanie mięsa podczas peklowania!</p>
-      )}
+      {massageRequired && <p class="warning">{text.massageReqWarning}</p>}
     </article>
   );
 }

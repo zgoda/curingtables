@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'preact/hooks';
+import { CloudLightning, Delete } from 'preact-feather';
 
 import { Help } from './help';
 import { ResultsPanel } from './results';
@@ -90,9 +91,11 @@ export function Calculator() {
           />
         </label>
         <div class="grid">
-          <button onClick={showResultsPanel}>{text.buttonCalc}</button>
+          <button onClick={showResultsPanel}>
+            <CloudLightning /> {text.buttonCalc}
+          </button>
           <button class="outline" onClick={() => setResultsVisible(false)}>
-            {text.buttonClear}
+            <Delete /> {text.buttonClear}
           </button>
         </div>
         {resultsVisible && (

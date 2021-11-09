@@ -1,0 +1,11 @@
+{
+  "text": {
+    "title": "Wyniki obliczeń",
+    "water": "Ilość wody",
+    "saltMin": "Ilość soli, minimum",
+    "saltMax": "Ilość soli, maksimum",
+    "injMin": "Nastrzyk przy minimalnej ilości soli",
+    "injMax": "Nastrzyk przy maksymalnej ilości soli",
+    "massageReqWarning": "Uwaga, wymagane będzie masowanie mięsa w trakcie procesu peklowania!"
+  }
+}

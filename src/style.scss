@@ -3,3 +3,12 @@ $primary-600: #c0ca33;
 $primary-700: #afb42b;
 
 @import '../node_modules/@picocss/pico/scss/pico.scss';
+
+footer > div.grid > div {
+  text-align: center;
+}
+
+.warning {
+  color: darkgoldenrod;
+  font-weight: bold;
+}
