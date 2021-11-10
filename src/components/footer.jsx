@@ -7,8 +7,10 @@ export function Footer() {
         <hr />
         <p>{text.copyright}</p>
         <div class="grid">
-          {text.links.map((linkText) => (
-            <div key={`link-${linkText}`}>{linkText}</div>
+          {text.links.map(([linkText, url]) => (
+            <div key={`link-${url}`}>
+              <a href={url}>{linkText}</a>
+            </div>
           ))}
         </div>
       </footer>

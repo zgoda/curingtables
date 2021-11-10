@@ -2,9 +2,9 @@
   "text": {
     "copyright": "Copyright: © 2021, Jarek Zgoda. Wolne oprogramowanie na licencji BSD.",
     "links": [
-      "O aplikacji",
-      "Deklaracja prywatności",
-      "Kontakt"
+      ["O aplikacji", "/about/"],
+      ["Deklaracja prywatności", "/privacy/"],
+      ["Kontakt", "/contact/"]
     ]
   }
 }

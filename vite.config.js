@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import { resolve } from 'path';
 import preact from '@preact/preset-vite';
 import { VitePWA } from 'vite-plugin-pwa';
 
@@ -34,6 +35,16 @@ export default defineConfig({
       },
     }),
   ],
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        about: resolve(__dirname, 'about/index.html'),
+        privacy: resolve(__dirname, 'privacy/index.html'),
+        contact: resolve(__dirname, 'contact/index.html'),
+      },
+    },
+  },
   server: {
     port: 8080,
   },
