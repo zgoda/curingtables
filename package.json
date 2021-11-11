@@ -6,7 +6,8 @@
     "build": "vite build",
     "serve": "cross-env PORT=8443 serve dist",
     "start": "npm run build && npm run serve",
-    "test": "jest"
+    "test": "jest",
+    "test:ci": "jest --ci"
   },
   "types": "./index.d.ts",
   "dependencies": {
