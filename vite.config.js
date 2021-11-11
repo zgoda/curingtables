@@ -2,9 +2,13 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import preact from '@preact/preset-vite';
 import { VitePWA } from 'vite-plugin-pwa';
+import handlebars from 'vite-plugin-handlebars';
 
 export default defineConfig({
   plugins: [
+    handlebars({
+      partialDirectory: resolve(__dirname, 'partials'),
+    }),
     preact(),
     VitePWA({
       base: '/',
