@@ -1,42 +1,20 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Peklowanie na mokro - Kontakt</title>
-    <meta name="description" content="Tabele peklowania zalewowego (na mokro) wg Dziadka" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="alternate icon" href="/favicon.ico" type="image/png" sizes="16x16">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
-    <link rel="mask-icon" href="/favicon.svg" color="#FFFFFF">
-    <link rel="stylesheet" href="/src/style.css">
-    <meta name="theme-color" content="#ffffff">
-  </head>
+  {{> head pagetitle="Kontakt"}}
   <body>
-    <svg>
-      <defs>
-        <symbol id="arrow-left">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="feather feather-arrow-left">
-            <line x1="19" y1="12" x2="5" y2="12"></line>
-            <polyline points="12 19 5 12 12 5"></polyline>
-          </svg>
-        </symbol>
-      </defs>
-    </svg>
+    {{> svgmap}}
     <main class="container">
-      <nav>
-        <ul>
-          <li>
-            <a href="/">
-              <span class="icon"><svg><use xlink:href="#arrow-left"></use></svg></span>&nbsp;Powrót do strony głównej
-            </a>
-          </li>
-        </ul>
-      </nav>
+      {{> nav}}
       <section>
         <h1>Kontakt</h1>
+      </section>
+      <section>
+        <p>Z autorem można się skontaktować przez:</p>
+        <ul>
+          <li>w przypadku zauważonych błędów, nieścisłości lub sugestii usprawnień - <a href="https://github.com/zgoda/curingtables/issues">system zgłoszeń repozytorium na Githubie</a></li>
+          <li>ogólna dyskusja toczy się w <a href="https://wedlinydomowe.pl/forum/topic/18619-peklowanie-mokre-kalkulator/">wydzielonym wątku na forum WB</a> i w komentarzach do <a href="https://www.facebook.com/groups/wedzarniczabrac/posts/1959070834254942/">posta ze zgłoszeniem na grupie WB na Facebooku</a></li>
+          <li>w pozostałych sprawach - przez wiadomość prywatną <a href="https://wedlinydomowe.pl/forum/">na forum WB</a></li>
+        </ul>
       </section>
     </main>
   </body>
