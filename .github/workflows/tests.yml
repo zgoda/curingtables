@@ -27,4 +27,4 @@ jobs:
           restore-keys: |
             node-${{ matrix.node-version }}
       - run: npm i
-      - run: npm run test:ci
+      - run: npm run test
