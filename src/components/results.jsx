@@ -8,7 +8,7 @@ import {
   WATER_RATIO,
 } from '../tables';
 
-import { text } from './result.json';
+import { text } from './results.json';
 
 /**
  * @typedef {object} Props
