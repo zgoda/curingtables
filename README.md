@@ -1,4 +1,4 @@
-[![Tests](https://github.com/zgoda/curingtables/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/zgoda/curingtables/actions/workflows/tests.yml) [![Coverage Status](https://coveralls.io/repos/github/zgoda/curingtables/badge.svg?branch=master)](https://coveralls.io/github/zgoda/curingtables?branch=master)
+[![Tests](https://github.com/zgoda/curingtables/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/zgoda/curingtables/actions/workflows/tests.yml) [![Coverage Status](https://coveralls.io/repos/github/zgoda/curingtables/badge.svg?branch=master)](https://coveralls.io/github/zgoda/curingtables?branch=master) | [![CodeFactor](https://www.codefactor.io/repository/github/zgoda/curingtables/badge)](https://www.codefactor.io/repository/github/zgoda/curingtables)
 
 # Charcuterie brining calculator
 
