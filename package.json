@@ -7,7 +7,7 @@
     "serve": "cross-env PORT=8443 serve dist",
     "start": "npm run build && npm run serve",
     "test": "jest",
-    "test:ci": "jest --runInBand --ci"
+    "test:ci": "jest --runInBand"
   },
   "types": "./index.d.ts",
   "dependencies": {
