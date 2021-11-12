@@ -41,9 +41,10 @@ export function ResultsPanel({ table, days, weight }) {
       </header>
       <ul>
         <li>
-          <strong>{text.water}:</strong> {water.toFixed(1)} l
+          <strong>{text.water}:</strong>{' '}
+          <span data-testid="amt-water">{water.toFixed(1)}</span> l
         </li>
-        <li>
+        <li data-testid="salt-low">
           <strong>{text.saltMin}:</strong> {saltLow.toFixed()} g
         </li>
         <li>
