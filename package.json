@@ -9,6 +9,11 @@
     "test": "jest",
     "test:ci": "jest --runInBand"
   },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "not dead"
+  ],
   "types": "./index.d.ts",
   "dependencies": {
     "@picocss/pico": "^1.4.1",
