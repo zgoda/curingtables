@@ -1,6 +1,7 @@
-import { useRegisterSW } from 'virtual:pwa-register/react';
+import { useRegisterSW } from 'virtual:pwa-register/preact';
 
 import { text } from './reloadprompt.json';
+import styles from './reloadprompt.module.css';
 
 export function ReloadPrompt() {
   const {
@@ -28,13 +29,13 @@ export function ReloadPrompt() {
           {offlineReady ? <p>{text.offlineReady}</p> : <p>{text.contentRefresh}</p>}
           <div class="grid">
             {needRefresh && (
-              <div>
+              <div class={styles.center}>
                 <button class="autowidth" onClick={() => updateServiceWorker(true)}>
                   {text.reloadButton}
                 </button>
               </div>
             )}
-            <div>
+            <div class={styles.center}>
               <button class="autowidth" onClick={() => close()}>
                 {text.closeButton}
               </button>
