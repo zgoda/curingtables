@@ -1,12 +1,12 @@
-import { v4 as uuid } from '@lukeed/uuid';
+import { uid } from 'uid';
 
 import { help } from './help.json';
 
 /**
- * @typedef {object} props
+ * @typedef {object} Props
  * @property {string} item
  *
- * @param {props} props
+ * @param {Props} props
  * @returns {JSX.Element}
  */
 export function Help({ item }) {
@@ -16,7 +16,7 @@ export function Help({ item }) {
     <div>
       {text &&
         text.map((line) => {
-          const key = uuid();
+          const key = uid(16);
           return (
             <p key={`l-${key}`}>
               <small>{line}</small>

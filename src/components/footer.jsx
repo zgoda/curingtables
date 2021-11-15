@@ -8,7 +8,7 @@ export function Footer() {
         <p>{text.copyright}</p>
         <div class="grid">
           {text.links.map(([linkText, url]) => (
-            <div key={`link-${url}`}>
+            <div key={`link-${url}`} class="center">
               <a href={url}>{linkText}</a>
             </div>
           ))}

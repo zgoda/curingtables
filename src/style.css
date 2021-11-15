@@ -40,10 +40,6 @@
 }
 
 /* Global styles */
-footer > div.grid > div {
-  text-align: center;
-}
-
 .warning {
   color: darkgoldenrod;
   font-weight: bold;
@@ -51,6 +47,11 @@ footer > div.grid > div {
 
 .autowidth {
   width: auto;
+}
+
+.center {
+  text-align: center;
+  margin: 0 auto;
 }
 
 body > svg {
