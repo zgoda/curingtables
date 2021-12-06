@@ -26,7 +26,17 @@ describe('Results for short brining', () => {
 
 describe('Results for normal brining', () => {
   test('should not display warning', () => {
-    const days = randInt(4, 13);
+    const days = randInt(4, 10);
+    const { container } = render(
+      <ResultsPanel days={days} weight={1} table="modern" />,
+    );
+    expect(container.querySelector('p.warning')).not.toBeInTheDocument();
+  });
+});
+
+describe('Results for prolonged brining', () => {
+  test('should not display warning', () => {
+    const days = randInt(11, 13);
     const { container } = render(
       <ResultsPanel days={days} weight={1} table="modern" />,
     );
