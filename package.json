@@ -31,7 +31,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "https-localhost": "^4.7.0",
-    "jest": "^27.4.4",
+    "jest": "^27.4.5",
     "jest-preset-preact": "^4.0.5",
     "prettier": "^2.5.1",
     "vite": "^2.7.1",
