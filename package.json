@@ -34,7 +34,7 @@
     "jest": "^27.4.5",
     "jest-preset-preact": "^4.0.5",
     "prettier": "^2.5.1",
-    "vite": "^2.7.6",
+    "vite": "^2.7.7",
     "vite-plugin-handlebars": "^1.6.0",
     "vite-plugin-pwa": "^0.11.12",
     "workbox-window": "^6.4.2"
