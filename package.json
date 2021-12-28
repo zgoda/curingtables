@@ -22,7 +22,7 @@
     "uid": "^2.0.0"
   },
   "devDependencies": {
-    "@preact/preset-vite": "^2.1.6",
+    "@preact/preset-vite": "^2.1.7",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/preact": "^2.0.1",
     "cross-env": "^7.0.3",
