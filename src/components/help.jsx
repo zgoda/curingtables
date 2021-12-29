@@ -14,15 +14,14 @@ export function Help({ item }) {
   const text = help[item];
   return (
     <div>
-      {text &&
-        text.map((line) => {
-          const key = uid(16);
-          return (
-            <p key={`l-${key}`}>
-              <small>{line}</small>
-            </p>
-          );
-        })}
+      {text?.map((line) => {
+        const key = uid(16);
+        return (
+          <p key={`l-${key}`}>
+            <small>{line}</small>
+          </p>
+        );
+      })}
     </div>
   );
 }
