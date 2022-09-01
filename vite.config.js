@@ -6,6 +6,8 @@ import handlebars from 'vite-plugin-handlebars';
 
 export default defineConfig({
   plugins: [
+    // https://github.com/alexlafroscia/vite-plugin-handlebars/issues/214
+    // @ts-ignore
     handlebars({
       partialDirectory: resolve(__dirname, 'partials'),
     }),
