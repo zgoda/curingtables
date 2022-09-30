@@ -19,7 +19,7 @@
     "@picocss/pico": "^1.5.5",
     "preact": "^10.11.0",
     "preact-feather": "^4.2.1",
-    "uid": "^2.0.0"
+    "uid": "^2.0.1"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.4.0",
