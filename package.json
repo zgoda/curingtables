@@ -10,9 +10,7 @@
     "test:ci": "jest --runInBand"
   },
   "browserslist": [
-    "last 2 versions",
-    "> 1%",
-    "not dead"
+    "defaults"
   ],
   "types": "./index.d.ts",
   "dependencies": {
