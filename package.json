@@ -17,7 +17,7 @@
   "types": "./index.d.ts",
   "dependencies": {
     "@picocss/pico": "^1.5.10",
-    "preact": "^10.14.0",
+    "preact": "^10.14.1",
     "preact-feather": "^4.2.1",
     "uid": "^2.0.2"
   },
@@ -34,7 +34,7 @@
     "jest": "^27.5.1",
     "jest-preset-preact": "^4.0.5",
     "prettier": "^2.8.8",
-    "vite": "^4.3.6",
+    "vite": "^4.3.8",
     "vite-plugin-handlebars": "^1.6.0",
     "vite-plugin-pwa": "^0.14.7",
     "workbox-window": "^6.5.4"
