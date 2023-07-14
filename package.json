@@ -30,7 +30,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "https-localhost": "^4.7.1",
     "jest": "^27.5.1",
-    "jest-preset-preact": "^4.0.5",
+    "jest-preset-preact": "^4.1.0",
     "prettier": "^2.8.8",
     "vite": "^4.3.9",
     "vite-plugin-handlebars": "^1.6.0",
