@@ -2,14 +2,18 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import preact from '@preact/preset-vite';
 import { VitePWA } from 'vite-plugin-pwa';
-import handlebars from 'vite-plugin-handlebars';
+import handlebars from '@vituum/vite-plugin-handlebars';
 
 export default defineConfig({
   plugins: [
     // https://github.com/alexlafroscia/vite-plugin-handlebars/issues/214
     // @ts-ignore
     handlebars({
-      partialDirectory: resolve(__dirname, 'partials'),
+      partials: {
+        directory: resolve(__dirname, 'partials'),
+        extname: false,
+      },
+      formats: ['hbs', 'hbs.html'],
     }),
     preact(),
     VitePWA({
@@ -43,12 +47,12 @@ export default defineConfig({
   ],
   build: {
     rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'index.html'),
-        about: resolve(__dirname, 'about/index.html'),
-        privacy: resolve(__dirname, 'privacy/index.html'),
-        contact: resolve(__dirname, 'contact/index.html'),
-      },
+      input: [
+        resolve(__dirname, 'index.html'),
+        resolve(__dirname, 'about', 'index.hbs.html'),
+        resolve(__dirname, 'privacy', 'index.hbs.html'),
+        resolve(__dirname, 'contact', 'index.hbs.html'),
+      ],
     },
   },
   server: {
