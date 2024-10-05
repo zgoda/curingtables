@@ -16,7 +16,7 @@
   "types": "./index.d.ts",
   "dependencies": {
     "@picocss/pico": "^2.0.6",
-    "preact": "^10.24.1",
+    "preact": "^10.24.2",
     "preact-feather": "^4.2.1",
     "uid": "^2.0.2"
   },
