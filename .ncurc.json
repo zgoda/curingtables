@@ -1,5 +1,7 @@
 {
   "reject": [
-    "eslint"
+    "eslint",
+    "jest",
+    "jest-environment-jsdom"
   ]
 }
